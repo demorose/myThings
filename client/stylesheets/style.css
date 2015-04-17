@@ -19,7 +19,7 @@ body {
 }
 
 #login-buttons {
-    display: none;
+    float: left;
 }
 
 #title {

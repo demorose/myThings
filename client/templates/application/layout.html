@@ -1,0 +1,15 @@
+<template name="layout">
+    <div id="wrapper">
+        <div id="head">
+            <a href="{{pathFor 'listsList'}}"><h1 id="title">My Things</h1></a>
+        </div>
+        <div id="content">
+            <h2 id="sub-title">{{pageTitle}}</h2>
+            {{> yield }}
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+</template>
+
