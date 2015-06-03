@@ -3,8 +3,17 @@
         {{#each lists}}
             {{> listItem}}
         {{/each}}
-        <div class="list add">
+        <div class="list add" id="add-list">
             <span>+</span>
+        </div>
+        <div class="popup" id="add-new-list">
+            <form class="new-list">
+                <label for="name">Name</label><input name="name" value="" id="name">
+                <label for="color">Color</label><input name="color" value="" id="color">
+                <label for="attr[]">Attribute</label><input name="attr[]" value="">
+                <input type="button" name="add-attribute" value="Add attribute" id="add-attribute">
+                <input type="submit" name="" value="Submit" id="submit">
+            </form>
         </div>
     </div>
 </template>
