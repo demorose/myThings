@@ -7,6 +7,11 @@ Template.listsList.helpers({
 Template.listsList.events({
     "click #add-list": function(event) {
         $('.popup#add-new-list').show();
+        $('.popupBack#add-new-list-background').show();
+    },
+    "click #add-new-list-background": function(event) {
+        $('.popup#add-new-list').hide();
+        $('.popupBack#add-new-list-background').hide();
     },
     "submit .new-list": function(event) {
         var name = event.target.name.value;
@@ -24,6 +29,7 @@ Template.listsList.events({
         event.target.color.value = "";
 
         $('.popup#add-new-list').hide();
+        $('.popupBack#add-new-list-background').hide();
         return false;
     }
 });

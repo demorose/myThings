@@ -11,3 +11,5 @@ accounts-password
 iron:router
 sacha:spin
 aldeed:autoform
+aldeed:collection2
+mizzao:bootstrap-3

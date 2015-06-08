@@ -1,3 +1,6 @@
 <template name='listPage'>
-    {{> listItem}}
+    <h2>{{name}}</h2>
+    {{#each attributes}}
+        {{name}}<br />
+    {{/each}}
 </template>
