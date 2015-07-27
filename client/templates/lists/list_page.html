@@ -1,6 +1,9 @@
 <template name='listPage'>
     <h2>{{name}}</h2>
-    {{#each attributes}}
-        {{name}}<br />
-    {{/each}}
+    <form id="add-element">
+        {{#each attributes}}
+            {{underscored_name}}
+            <label for="attr_{{underscored_name}}">{{name}}</label><input type="text" name="attr_{{underscored_name}}" value="" id="attr_{{underscored_name}}">
+        {{/each}}
+    </form>
 </template>

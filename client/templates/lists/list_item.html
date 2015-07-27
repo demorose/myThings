@@ -1,7 +1,8 @@
 <template name="listItem">
     <a href="{{pathFor 'listPage'}}">
         <div class="list" style="background: {{color}}">
-            <div class="name">{{name}}</div>
+            <div class="name" title="{{name}}">{{name}}</div>
+            <div class="nb-element">0</div>
         </div>
     </a>
 </template>

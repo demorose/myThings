@@ -6,7 +6,7 @@ body {
 
 #wrapper {
     margin: auto;
-    width: 1080px;
+    max-width: 1080px;
 }
 
 #head {
@@ -27,7 +27,7 @@ body {
 }
 
 #content {
-    width: 1080px;
+    width: 100%;
     margin: auto;
 }
 
@@ -39,6 +39,14 @@ body {
 
 }
 
+.lists {
+    text-align: center;
+}
+
+.lists a:hover {
+    text-decoration: none;
+}
+
 .list {
     display: inline-block;
     width: 200px;
@@ -47,6 +55,7 @@ body {
     text-align: center;
     box-shadow: 1px 1px 2px #000;
     border-radius: 5px;
+    margin: 6px 6px 6px 6px;
 }
 
 .list:hover {
@@ -54,6 +63,7 @@ body {
     box-shadow: inset 1px 1px 2px #000;
     left: 1px;
     top: 1px;
+    text-decoration: none;
 }
 
 .list .name {
@@ -62,6 +72,20 @@ body {
     line-height: 50px;
     color: #fff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
+}
+
+.list .nb-element {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
 }
 
 .list.add {
@@ -70,20 +94,30 @@ body {
     font-size: 150px;
     color: #fff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
 }
 
 .popup {
     display: none;
-    position: fixed;
+    text-align: left;
+    position: absolute;
     background: white;
     padding: 15px;
-    margin-top: 200px;
     z-index: 100;
-    top: 0;
-    width: auto;
     border: 3px solid #000;
-    border-radius: 3px;
+    border-radius: 6px;
     opacity: 1;
+    left: 50%;
+    top: 50%;
+    transition: opacity .5s, top .5s;
+    transform: translate(-50%, -50%);
+}
+
+.popup#add-new-list {
+}
+
+.popup label {
+    width: 150px;
 }
 
 .popupBack {
