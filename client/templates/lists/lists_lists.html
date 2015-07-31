@@ -3,19 +3,34 @@
         {{#each lists}}
             {{> listItem}}
         {{/each}}
-        <div class="list add" id="add-list">
-            <span>+</span>
-        </div>
+        {{#if currentUser}}
+            <div class="list add" id="add-list">
+                <span>+</span>
+            </div>
+        {{/if}}
         <div class="popupBack" id="add-new-list-background">
         </div>
         <div class="popup" id="add-new-list">
             <form id="new-list" method="post">
-                <p id="name_input"><label for="name">Name</label><input type="text" name="name" value="" id="name"></p>
-                <p id="color_input"><label for="color">Color</label><input type="color" name="color" value="#ffffff" class="" id="color"></p>
-                <p id="attribute_input_1"><label for="attribute[1]">Attribute 1 Name</label><input type="text" name="attribute[1]" class="attribute" id="attribute1"></p>
-                <p id="attribute_input_2"><label for="attribute[2]">Attribute 2 Name</label><input type="text" name="attribute[2]" class="attribute" id="attribute2"></p>
-                <p><a id="clone_attribute">Add more attributes</a></p>
-                <p><input type="submit" value="Submit" name="submit" id="submit"/></p>
+                <h2>Create list</h2>
+                <p id="new-list-name-input"><label for="name">Name</label><input type="text" name="name" value="" id="new-list-name"></p>
+                <p id="new-list-color-input"><label for="color">Color</label><input type="color" name="color" value="#ffffff" class="" id="new-list-color"></p>
+                <p id="new-list-attribute-input-1"><label for="attribute[1]">Attribute 1 Name</label><input type="text" name="attribute[1]" class="attribute" id="new-list-attribute1"></p>
+                <p id="new-list-attribute-input-2"><label for="attribute[2]">Attribute 2 Name</label><input type="text" name="attribute[2]" class="attribute" id="new-list-attribute2"></p>
+                <p><a id="new-list-clone-attribute">Add more attributes</a></p>
+                <p><input type="submit" value="Submit" name="submit" id="new-list-submit"/></p>
+            </form>
+        </div>
+        <div class="popupBack" id="edit-list-background">
+        </div>
+        <div class="popup" id="edit-list">
+            <form id="edit-list" method="post">
+                <h2>Edit list</h2>
+                <input type="hidden" name="id" value="" id="edit-list-id">
+                <p id="edit-list-name-input"><label for="name">Name</label><input type="text" name="name" value="" id="edit-list-name"></p>
+                <p id="edit-listcolor-input"><label for="color">Color</label><input type="color" name="color" value="#ffffff" class="" id="edit-list-color"></p>
+                <p><a id="edit-list-clone-attribute">Add more attributes</a></p>
+                <p><input type="submit" value="Submit" name="submit" id="edit-list-submit"/></p>
             </form>
         </div>
     </div>

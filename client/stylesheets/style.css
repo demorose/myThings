@@ -48,6 +48,7 @@ body {
 }
 
 .list {
+    position: relative;
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -88,6 +89,19 @@ body {
     padding: 5px;
 }
 
+.list .toolbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    white-space: nowrap;
+    padding: 5px;
+    text-align: right;
+}
+
 .list.add {
     background: #58ACFA;
     line-height: 200px;
@@ -111,6 +125,13 @@ body {
     top: 50%;
     transition: opacity .5s, top .5s;
     transform: translate(-50%, -50%);
+}
+
+.popup h2 {
+    text-align: center;
+    border-bottom: solid 1px #e1e1e1;
+    margin-top: 0px;
+    padding-bottom: 15px;
 }
 
 .popup#add-new-list {
